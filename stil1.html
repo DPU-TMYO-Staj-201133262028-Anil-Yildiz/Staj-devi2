@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: menu; }	/*Gridin nelerden oluştuğunu ayarlıyoruz*/
+.item2 { grid-area: first; }
+.item3 { grid-area: second; }
+.item4 { grid-area: third; }
+.item5 { grid-area: fourth; }
+.item6 { grid-area: fifth; }
+.item7{ grid-area:zero; }
+
+.grid-container {		/* Gridin şeklini ayarlıyoruz */
+  display: grid;
+  border-radius: 25px;
+  grid-template-areas:
+    'menu zero zero zero zero zero' 
+    'menu first first first first first' 
+    'menu second second second second second'
+    'menu third third third third third'
+    'menu fourth fourth fourth fourth fourth'
+    'menu fifth fifth fifth fifth fifth';
+  grid-gap: 10px;
+  background-color:royalblue;
+        padding: 10px;
+}
+
+.grid-container > div {	
+  
+  background-color: white;
+  padding:%100px 0;
+  font-size: 30px;
+  color: black;
+  border-radius: 30px;
+}
+@media screen and (max-width: 500px) { /* Bu kısımda 528 piksel büyükken yapılması gereken değişikliklerin komutunu verdik. Menunun tek bir sütun şeklinde olup item1'in açılır liste şekline gelmesi gibi*/
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+        
+            'menu menu menu menu menu menu'
+            'zero zero zero zero zero zero'
+            'first first first first first first'
+            'second second second second second second'
+            'third third third third third third '
+            'fourth fourth fourth fourth fourth fourth'
+            'fifth fifth fifth fifth fifth fifth';
+        grid-gap: 10px;
+        background-color: rgb(57, 86, 110);
+        padding: 10px;
+        border-radius: 60px;
+    }
+
+</style>
+</head>
+<body>
+    
+<div class="grid-container"><!--Oluşturduğumuz gridlerin içini dolduruyoruz -->
+ <div class="item7" style="text-align: center; border-radius: 50px;">
+        <a href="index.html" target="cerceve"><font color="black">Kişisel Bilgiler</font></a>
+  </div>  
+<div class="item2" style="text-align: center; border-radius: 50px;">
+        <a href="egitim.html" target="cerceve"><font color="black">Eğitim</font></a>
+  </div> <!--Oluşturduğumuz gridlerin içini metinlerle dolduruyoruz -->
+  <div class="item3" style="text-align: center; border-radius: 50px;">
+        <a href="programlar.html" target="cerceve"><font color="black">Programlar</font></a>
+  </div>
+  <div class="item4" style="text-align: center; border-radius: 50px;">
+        <a href="deneyim.html" target="cerceve"><font color="black">Deneyim </font></a>
+  </div>
+  <div class="item5" style="text-align: center; border-radius: 50px;">
+       <a href="diger.html" target="cerceve"><font color="black">Diğer</font></a>
+  </div>
+  <div class="item6" style="text-align: center; border-radius: 50px;">
+    <a href="hedefler.html" target="cerceve"><font color="black">Hedefler</font></a>
+  </div>
+  <div class="item1" style="text-align: center; border-radius: 10px;"><iframe width="950" height="672"  frameborder="0" src="index.html" name="cerceve" scrolling="no"></iframe></div>  <!-- Metinleri yerleştireceğimiz çerçeveyi oluşturuyoruz. -->
+</div>
+
+</body>
+</html>
